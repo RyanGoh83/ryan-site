@@ -1,45 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Ryan Goh | Website</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-</head>
+{% extends "header.html" %}
 
-<header>
-	<nav class = "navbar navbar-default" role = "navigation">
-		<div class = "container-fluid">
-			<div class="navbar-header" style = "padding-left: 10%">
-			<a class="navbar-brand" href="/">
-				<img style="max-width:120px; margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
-			</a>
-			</div>
-		
-		
-			<ul class = "nav navbar-nav" style = "padding: 3% 1% 1% 1%;">
-				<h3><a href="/about_me/"> about me</a> |
-				<a href="/projects/"> projects</a> |
-				<a href="/blog/"> blog</a></h3>
-			</ul>
-				
-			<ul class="nav navbar-nav navbar-right" style = "padding: 3% 10% 1% 1%;">
-				<h4>contact me:  
-				<a href="mailto:gohry2@gmail.com"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i> </a>
-				<a href="https://www.linkedin.com/in/ryan-goh-cfa-6336058a/"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i> </a>
-				</h4>
-			</ul>
-		</div>
-	</nav>
-</header>
+{% block body %}
 
-<body>
-
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<div class="well well-sm" align= "left" style="max-width:1050px">
+	<div id="iotd">
+		<h3>Image of the day</h3>
+	</div>
 	
-</body>
 
-</html>
+	<br>
+	<div id="qotd">
+		<h3>Quote of the day</h3>
+	</div>
+	
+	<br>
+	<div id="latest-blog">
+		<h3>Latest Posts</h3>
+	</div>
+</div>
+{% endblock %}
