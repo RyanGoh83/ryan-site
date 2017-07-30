@@ -2,19 +2,21 @@
 
 {% block body %}
 
-<div class="well well-sm" align= "left" style="max-width:1050px">
-	<div id="iotd">
+<div>
+	<div class="well well-sm" align= "left" style="max-width:800px" id="qotd">
+		<h3>Quote of the day</h3>
+		<blockquote class="blockquote">
+			<p class="mb-0">{{ qotd_display[1] }}</p>
+			<p class="mb-0">{{ qotd_display[0] }}</p>
+		</blockquote>
+	</div>
+	<br>
+	<div class="well well-sm" align= "left" style="max-width:800px" id="iotd">
 		<h3>Image of the day</h3>
 	</div>
 	
-
 	<br>
-	<div id="qotd">
-		<h3>Quote of the day</h3>
-	</div>
-	
-	<br>
-	<div id="latest-blog">
+	<div class="well well-sm" align= "left" style="max-width:800px" id="latest-blog">
 		<h3>Latest Posts</h3>
 	</div>
 </div>
