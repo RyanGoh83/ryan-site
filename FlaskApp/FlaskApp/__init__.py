@@ -13,9 +13,15 @@ app.config["DEBUG"] = True
 
 
 def quote_generator():
-        quote_dict =[["a1", "q1"],
-         ["a2", "q2"],
-         ["a3", "q3"]
+        quote_dict =[["Some people care too much. I think it's called love.", "A.A. Milne, Winnie-the-Pooh"],
+         ["You can't stay in your corner of the Forest waiting for others to come to you. You have to go to them sometimes.", "A.A. Milne, Winnie-the-Pooh"],
+        ["I think we dream so we don’t have to be apart for so long. If we’re in each other’s dreams, we can be together all the time.", "A.A. Milne, Winnie-the-Pooh"],
+          
+
+
+
+
+
         ]
         qotd_pair = random.choice(quote_dict)
         return qotd_pair

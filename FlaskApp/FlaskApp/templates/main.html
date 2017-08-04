@@ -2,22 +2,26 @@
 
 {% block body %}
 
-<div>
-	<div class="well well-sm" align= "left" style="max-width:800px" id="qotd">
-		<h3>Quote of the day</h3>
-		<blockquote class="blockquote">
-			<p class="mb-0">{{ qotd_display[1] }}</p>
-			<p class="mb-0">{{ qotd_display[0] }}</p>
-		</blockquote>
+<div class="row">
+	<div class="col-md-5 " align= "left" id="qotd">
+		<div class = "well well-sm"><h3>Quote of the day</h3>
+			<blockquote class="blockquote">
+				<p class="mb-0">" {{ qotd_display[0] }} "</p>
+				<p class="mb-0" align = "right"> - {{ qotd_display[1] }}</p>
+			</blockquote>
+		</div>
 	</div>
-	<br>
-	<div class="well well-sm" align= "left" style="max-width:800px" id="iotd">
-		<h3>Image of the day</h3>
+	<div class="col-md-7">
+		<div class="well well-sm" align= "left" id="iotd">
+			<h3>Image of the day</h3>
+		</div>
 	</div>
-	
-	<br>
-	<div class="well well-sm" align= "left" style="max-width:800px" id="latest-blog">
-		<h3>Latest Posts</h3>
+</div>
+<div class = "row">
+	<div class="col-md-12" align= "left" id="latest-blog">
+			<div class = "well well-sm">
+				<h3>Latest Posts</h3>
+			</div>	
 	</div>
 </div>
 {% endblock %}
