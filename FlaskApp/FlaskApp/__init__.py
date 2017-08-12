@@ -1,7 +1,7 @@
 from flask import Flask, render_template, url_for
 from functools import wraps
 
-import random
+import random, os
 
 app = Flask(__name__)
 
@@ -26,12 +26,18 @@ def quote_generator():
         qotd_pair = random.choice(quote_dict)
         return qotd_pair
 
+def iotd_generator():
+        picOfTheDay = str(random.randint(1,3))+ ".jpg"
+        iotd = os.path.join(r"images/iotd/", picOfTheDay)
+        return iotd
 
 # route decorators
 @app.route('/')
 def homepage():
         qotd_display = quote_generator()
-        return render_template("main.html", qotd_display = qotd_display)
+        iotd = iotd_generator()
+        return render_template("main.html", qotd_display = qotd_display,\
+                               iotd = iotd)
 
 @app.route('/about_me/')
 def about_me():
