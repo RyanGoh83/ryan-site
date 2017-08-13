@@ -43,6 +43,10 @@ def homepage():
 def about_me():
         return render_template("about_me.html")
 
+@app.route('/blog/')
+def blog():
+        return render_template("blog.html")
+
 if __name__ == "__main__":
 	app.run()
 
