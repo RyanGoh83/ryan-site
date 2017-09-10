@@ -47,6 +47,13 @@ def about_me():
 def projects():
         return render_template("projects.html")
 
+@app.route('/projects/SG_prop/')
+def sg_prop():
+        return render_template("sg_prop.html")
+
+
+
+
 """@app.route('/blog/')
 def blog():
         return render_template("blog.html")

@@ -1,9 +1,6 @@
-/*#iotd {
-	position:relative;
-	max-height: 10px;
-	max-width: 20px;
-}*/
-
+#iotd{
+	border: 1px solid black;
+}
 .maincon {
 	align: center;
 }
